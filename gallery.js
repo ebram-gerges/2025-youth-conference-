@@ -83,7 +83,7 @@ mediaFiles.forEach((file) => {
 		const playBtn = document.createElement("button");
 		playBtn.className = "custom-video-btn";
 		playBtn.innerHTML = "&#9654;"; // play icon
-		playBtn.onclick = function() {
+		playBtn.onclick = function () {
 			if (video.paused) {
 				video.play();
 				playBtn.innerHTML = "&#10073;&#10073;"; // pause icon
@@ -93,17 +93,17 @@ mediaFiles.forEach((file) => {
 			}
 		};
 
-		video.onplay = function() {
+		video.onplay = function () {
 			playBtn.innerHTML = "&#10073;&#10073;";
 		};
-		video.onpause = function() {
+		video.onpause = function () {
 			playBtn.innerHTML = "&#9654;";
 		};
 
 		const muteBtn = document.createElement("button");
 		muteBtn.className = "custom-video-btn";
 		muteBtn.innerHTML = "&#128263;"; // speaker icon
-		muteBtn.onclick = function() {
+		muteBtn.onclick = function () {
 			video.muted = !video.muted;
 			muteBtn.innerHTML = video.muted ? "&#128263;" : "&#128266;";
 		};

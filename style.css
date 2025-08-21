@@ -24,7 +24,7 @@ main {
 .media-item {
 	background: #23263a;
 	border-radius: 14px;
-	box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -42,7 +42,7 @@ main {
 	border-radius: 10px;
 	margin-bottom: 0.5rem;
 	background: #181a20;
-	box-shadow: 0 1px 8px rgba(0,0,0,0.22);
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.22);
 }
 .media-item video {
 	background: #101218;
