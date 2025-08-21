@@ -1,125 +1,110 @@
 // Dynamically list all images and videos from the media folder
 const mediaFiles = [
 	// Images
-	"IMG-20250821-WA0001.jpg",
-	"IMG-20250821-WA0002.jpg",
-	"IMG-20250821-WA0003.jpg",
-	"IMG-20250821-WA0004.jpg",
-	"IMG-20250821-WA0005.jpg",
-	"IMG-20250821-WA0006.jpg",
-	"IMG-20250821-WA0007.jpg",
-	"IMG-20250821-WA0008.jpg",
-	"IMG-20250821-WA0009.jpg",
-	"IMG-20250821-WA0010.jpg",
-	"IMG-20250821-WA0011.jpg",
-	"IMG-20250821-WA0012.jpg",
-	"IMG-20250821-WA0014.jpg",
-	"IMG-20250821-WA0016.jpg",
-	"IMG-20250821-WA0017.jpg",
-	"IMG-20250821-WA0019.jpg",
-	"IMG-20250821-WA0020.jpg",
-	"IMG-20250821-WA0028.jpg",
-	"IMG-20250821-WA0029.jpg",
-	"IMG-20250821-WA0030.jpg",
-	"IMG-20250821-WA0031.jpg",
-	"IMG-20250821-WA0032.jpg",
-	"IMG-20250821-WA0033.jpg",
-	"IMG-20250821-WA0036.jpg",
-	"IMG-20250821-WA0038.jpg",
-	"IMG-20250821-WA0039.jpg",
-	"IMG-20250821-WA0040.jpg",
-	"IMG-20250821-WA0041.jpg",
-	"IMG-20250821-WA0042.jpg",
-	"IMG-20250821-WA0043.jpg",
-	"IMG-20250821-WA0044.jpg",
-	"IMG-20250821-WA0045.jpg",
-	"IMG-20250821-WA0046.jpg",
-	"IMG-20250821-WA0047.jpg",
-	"IMG-20250821-WA0048.jpg",
-	"IMG-20250821-WA0049.jpg",
-	"IMG-20250821-WA0050.jpg",
-	"IMG-20250821-WA0051.jpg",
-	"IMG-20250821-WA0052.jpg",
-	"IMG-20250821-WA0053.jpg",
-	"IMG-20250821-WA0054.jpg",
-	"IMG-20250821-WA0058.jpg",
+	"1.jpg",
+	"2.jpg",
+	"3.jpg",
+	"4.jpg",
+	"5.jpg",
+	"6.jpg",
+	"7.jpg",
+	"8.jpg",
+	"9.jpg",
+	"10.jpg",
+	"11.jpg",
+	"12.jpg",
+	"13.jpg",
+	"14.jpg",
+	"15.jpg",
+	"16.jpg",
+	"17.jpg",
+	"18.jpg",
+	"19.jpg",
+	"20.jpg",
+	"21.jpg",
+	"22.jpg",
+	"23.jpg",
+	"24.jpg",
+	"25.jpg",
+	"26.jpg",
+	"27.jpg",
+	"28.jpg",
+	"29.jpg",
+	"30.jpg",
+	"31.jpg",
+	"32.jpg",
+	"33.jpg",
+	"34.jpg",
+	"35.jpg",
+	"36.jpg",
+	"37.jpg",
+	"38.jpg",
+	"39.jpg",
+	"40.jpg",
+	"41.jpg",
+	"42.jpg",
+	"43.jpg",
+	"44.jpg",
+	"45.jpg",
 	// Videos
-	"VID-20250821-WA0022.mp4",
-	"VID-20250821-WA0023.mp4",
-	"VID-20250821-WA0024.mp4",
-	"VID-20250821-WA0025.mp4",
-	"VID-20250821-WA0026.mp4",
-	"VID-20250821-WA0027.mp4",
-	"VID-20250821-WA0055.mp4",
-	"VID-20250821-WA0056.mp4",
-	"VID-20250821-WA0057.mp4",
+	"1.mp4",
+	"2.mp4",
+	"3.mp4",
+	"4.mp4",
+	"5.mp4",
+	"6.mp4",
+	"7.mp4",
+	"8.mp4",
 ];
-
 const gallery = document.getElementById("gallery");
-
 mediaFiles.forEach((file) => {
 	const ext = file.split(".").pop().toLowerCase();
 	const item = document.createElement("div");
 	item.className = "media-item";
 	if (["jpg", "jpeg", "png", "gif", "webp"].includes(ext)) {
 		const img = document.createElement("img");
-		const mediaFiles = [
-			// Images
-			"IMG-20250821-WA0001.jpg",
-			"IMG-20250821-WA0003.jpg",
-			"IMG-20250821-WA0008.jpg",
-			"IMG-20250821-WA0010.jpg",
-			"IMG-20250821-WA0012.jpg",
-			"IMG-20250821-WA0014.jpg",
-			"IMG-20250821-WA0016.jpg",
-			"IMG-20250821-WA0020.jpg",
-			"IMG-20250821-WA0029.jpg",
-			"IMG-20250821-WA0030.jpg",
-			"IMG-20250821-WA0031.jpg",
-			"IMG-20250821-WA0032.jpg",
-			"IMG-20250821-WA0033.jpg",
-			"IMG-20250821-WA0036.jpg",
-			"IMG-20250821-WA0038.jpg",
-			"IMG-20250821-WA0039.jpg",
-			"IMG-20250821-WA0041.jpg",
-			"IMG-20250821-WA0042.jpg",
-			"IMG-20250821-WA0043.jpg",
-			"IMG-20250821-WA0044.jpg",
-			"IMG-20250821-WA0045.jpg",
-			"IMG-20250821-WA0046.jpg",
-			"IMG-20250821-WA0048.jpg",
-			"IMG-20250821-WA0049.jpg",
-			"IMG-20250821-WA0051.jpg",
-			"IMG-20250821-WA0053.jpg",
-			"IMG-20250821-WA0054.jpg",
-			"IMG-20250821-WA0058.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.01_5f5c608e.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.03_a2a105bb.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.04_29b13393.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.05_50b51048.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.06_ed060e28.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.07_46839a36.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.07_7ab60cbb.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.07_d770bcb3.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.07_f9b947a5.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.08_95a3b479.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.08_ca4cc1a0.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.09_212f0f9a.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.09_bbc8ad92.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.09_c19df564.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.09_d41ba8d2.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.10_14e449bd.jpg",
-			"WhatsApp Image 2025-08-21 at 20.07.11_9738743b.jpg",
-			// Videos
-			"VID-20250821-WA0022.mp4",
-			"VID-20250821-WA0023.mp4",
-			"VID-20250821-WA0024.mp4",
-			"VID-20250821-WA0025.mp4",
-			"VID-20250821-WA0026.mp4",
-			"VID-20250821-WA0027.mp4",
-			"VID-20250821-WA0056.mp4",
-			"VID-20250821-WA0057.mp4",
-			"WhatsApp Video 2025-08-21 at 20.07.11_546e6339.mp4",
-		];
+		img.src = `media/${file}`;
+		img.alt = file;
+		item.appendChild(img);
+	} else if (["mp4", "webm", "ogg"].includes(ext)) {
+		const video = document.createElement("video");
+		video.src = `media/${file}`;
+		video.setAttribute("playsinline", "");
+		video.preload = "metadata";
+		video.style.width = "100%";
+		video.style.background = "#101218";
+		video.controls = false;
+		const controls = document.createElement("div");
+		controls.className = "custom-video-controls";
+		const playBtn = document.createElement("button");
+		playBtn.className = "custom-video-btn";
+		playBtn.innerHTML = "&#9654;";
+		playBtn.onclick = function () {
+			if (video.paused) {
+				video.play();
+				playBtn.innerHTML = "&#10073;&#10073;";
+			} else {
+				video.pause();
+				playBtn.innerHTML = "&#9654;";
+			}
+		};
+		video.onplay = function () {
+			playBtn.innerHTML = "&#10073;&#10073;";
+		};
+		video.onpause = function () {
+			playBtn.innerHTML = "&#9654;";
+		};
+		const muteBtn = document.createElement("button");
+		muteBtn.className = "custom-video-btn";
+		muteBtn.innerHTML = "&#128263;";
+		muteBtn.onclick = function () {
+			video.muted = !video.muted;
+			muteBtn.innerHTML = video.muted ? "&#128263;" : "&#128266;";
+		};
+		controls.appendChild(playBtn);
+		controls.appendChild(muteBtn);
+		item.appendChild(video);
+		item.appendChild(controls);
 	}
+	gallery.appendChild(item);
 });
