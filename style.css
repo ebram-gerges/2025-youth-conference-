@@ -1,3 +1,63 @@
+/* Modal styles */
+#media-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(20, 22, 30, 0.95);
+	z-index: 9999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#media-modal[style*="display: flex"] {
+	display: flex !important;
+}
+#modal-content {
+	max-width: 95vw;
+	max-height: 95vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-download {
+	font-size: 1.3em !important;
+	width: 1.7em !important;
+	height: 1.7em !important;
+	padding: 0.3em !important;
+	cursor: pointer;
+	z-index: 10001;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+	transition: background 0.2s;
+}
+/* Modal close button style */
+.modal-close {
+	position: absolute;
+	top: 2vw;
+	right: 2vw;
+	background: #23263a;
+	color: #fff;
+	border: none;
+	font-size: 1.3em;
+	border-radius: 50%;
+	width: 1.7em;
+	height: 1.7em;
+	padding: 0.3em;
+	cursor: pointer;
+	z-index: 10001;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+	transition: background 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-close:hover {
+	background: #3a3e5a;
+}
 body {
 	margin: 0;
 	font-family: "Segoe UI", "Roboto", Arial, sans-serif;
@@ -17,20 +77,24 @@ main {
 	margin: auto;
 }
 .gallery {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	display: flex;
+	flex-wrap: wrap;
 	gap: 1.2rem;
+	align-items: flex-start;
+	justify-content: center;
 }
 .media-item {
 	background: #23263a;
 	border-radius: 14px;
 	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	display: inline-block;
 	padding: 0.5rem;
 	transition: box-shadow 0.2s;
+	vertical-align: top;
+	max-width: 320px;
+	width: auto;
+	margin-bottom: 1.2rem;
 }
 .media-item:hover {
 	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
